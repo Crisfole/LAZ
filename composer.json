@@ -22,7 +22,8 @@
 		"intervention/image": "*",
 		"aws/aws-sdk-php": "^3.3",
 		"predis/predis": "~1.0",
-		"fzaninotto/faker": "^1.5"
+		"fzaninotto/faker": "^1.5",
+		"rollbar/rollbar": "~0.15.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

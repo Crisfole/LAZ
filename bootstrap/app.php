@@ -41,6 +41,13 @@ $app->singleton(
 	'App\Exceptions\Handler'
 );
 
+
+require_once 'rollbar.php';
+$rollbar_config = Config::get('rollbar', NULL)
+if ($rollbar_config) {
+	Rollbar::init($rollbar_config)
+}
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

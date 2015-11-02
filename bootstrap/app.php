@@ -46,6 +46,10 @@ require_once 'rollbar.php';
 $rollbar_config = Config::get('rollbar', NULL)
 if ($rollbar_config) {
 	Rollbar::init($rollbar_config)
+	App::after(function($request, $response)
+	{
+		Rollbar::flush();
+	});
 }
 
 /*
